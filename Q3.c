@@ -17,6 +17,8 @@ struct Noeud {
 typedef struct Noeud *Noeud;
 
 typedef struct {
+    int state_count;
+    int ALPHABET_SIZE;
     int nbE;
     int nSy;
     int transition;
