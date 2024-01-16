@@ -3,6 +3,54 @@
 
 #include "autom.h"
 
+int verifierMot( Automate* automate, Noeud mot){
+  int etatcourant = 0; // État initial
+  Noeud courant = mot;
+  int mot=[Automate]
+
+  while (courant !=NULL || etatcourant > automate->nbE){
+    int symbole = courant -> valeur;
+    if( symbole< 0 || symbole >= automate->nSy){
+        printf("Erreur : Symbole non reconnu.\n");
+        libererListe(mot);
+        return 0;
+    }
+    int etatsuivant = -1;
+    // Chercher une transition depuis l'état courant avce le symbole donné
+    for (int j = 0; j < automate->nbE; j++) {
+      if (automate->mat[etatcourant][symbole][j] == 1){
+          etatsuivant = j;
+          break;
+      }
+    }
+    if (etatsuivant == -1) {
+      //aucune transitions
+      return 0; // mot non reconnu
+    }
+    etatcourant = etatsuivant;
+    courant= courant -> suivant;
+  }
+	if (courant == NULL){
+	printf("mot reconnu\n");
+ 
+	return 1; //mot reconnu
+	}
+ 
+  printf("mot non reconnu \n");
+  libererListe(mot);
+  return 0; //mot non reconnu
+}
+
+
+
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}
+
 
 /*struct Noeud{
   int valeur;
