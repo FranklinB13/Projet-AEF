@@ -9,8 +9,7 @@ typedef struct {
 
 // Structure pour les automates
 typedef struct {
-    int tate_count;
-    int ALPHABET_SIZE;
+    
     int nbE;
     int nSy;
     int transition;
