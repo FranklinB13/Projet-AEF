@@ -11,6 +11,13 @@
 typedef struct Noeud *Noeud;*/
 
 //ajouter en tete de liste
+/**
+ * @ajouter en tete de liste
+ * 
+ * @param tete 
+ * @param valeur 
+ * @return Noeud 
+ */
 Noeud ajouterEnTete(Noeud tete, int valeur){
   Noeud newNoeud = malloc(sizeof(Noeud));
   if(newNoeud == NULL){
@@ -22,11 +29,23 @@ Noeud ajouterEnTete(Noeud tete, int valeur){
   return tete;
 }
 // afficher les élément de la liste
+/**
+ * @afficher les élément de la liste
+ * 
+ * @param tete 
+ */
 void affiche( Noeud tete){
   for (Noeud p= tete; p!=NULL; p=p->suivant)
   {printf("%d\n", p->valeur );}
 }
 //ajouter en queue
+/**
+ * @ajouter en queue
+ * 
+ * @param tete 
+ * @param valeur 
+ * @return Noeud 
+ */
 
 Noeud ajouterEnQueue(Noeud tete, int valeur){
   Noeud newNoeud = malloc(sizeof(Noeud));
@@ -48,10 +67,22 @@ Noeud ajouterEnQueue(Noeud tete, int valeur){
     }
 }
 //verifier si la liste est vide
+/**
+ * @verifier si la liste est vide
+ * 
+ * @param tete 
+ * @return int 
+ */
 int estVide (Noeud tete){
   return (tete == NULL)? 1:0;
 }
 //supprimer en element en queue
+/**
+ * @supprimer en element en queue
+ * 
+ * @param tete 
+ * @return Noeud 
+ */
 Noeud supprimerEnQueue(Noeud tete){
   //si la liste est vide
     if (tete == NULL){
@@ -77,6 +108,12 @@ Noeud supprimerEnQueue(Noeud tete){
 }
 
 //supprimer un element en fin de liste
+/**
+ * @supprimer un element en fin de liste
+ * 
+ * @param tete 
+ * @return Noeud 
+ */
 Noeud supprimerEnTete(Noeud tete){
    if(tete != NULL)
    {Noeud aRenvoyer = malloc(sizeof(Noeud));
@@ -89,6 +126,11 @@ Noeud supprimerEnTete(Noeud tete){
 }
 
 // Fonction pour saisir dynamiquement la liste depuis l'utilisateur
+/**
+ * @Fonction pour saisir dynamiquement la liste depuis l'utilisateur
+ * 
+ * @return Noeud 
+ */
 Noeud saisirListe() {
     Noeud tete = NULL;
     int symbole;
