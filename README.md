@@ -1,28 +1,58 @@
-# Projet-AEF
-Introduction
-The purpose of this program is to implement a finite automaton in the C programming language. The automaton is defined by its number of states, alphabet, transition function, initial state, and set of final states. The program facilitates the creation, filling, display, transition input, word recognition, and memory deallocation for the automaton.
+Automata Program README
 
-Code Structure
-The file autom.c comprises the implementation of various functionalities. A Automaton structure is utilized to store details about the automaton, such as the number of states, symbols, transitions, and a three-dimensional matrix to represent the transition function.
+Authors
+Franklin
+Imane
+Ance
+Yasmine
 
-Implemented Features
-Automaton Creation (creerAutomate): Allows the user to specify the number of states, symbols, and transitions for the automaton. Dynamically allocates memory for the transition matrix.
 
-Transition Input (saisirtransition): Prompts the user to input transitions by specifying the starting state, symbol, and ending state. Includes checks to ensure the indices are valid.
+Overview
+This program, developed by Franklin, Imane, Ance, and Yasmine, is designed to work with automata. It allows users to create, import, manipulate, and verify automata. The primary functionalities include creating a new automaton, importing an automaton from a file, displaying the automaton, saving the automaton to a file, checking if the automaton is complete, making the automaton complete, checking if the automaton is deterministic, making the automaton deterministic, and verifying a word against the automaton.
 
-Filling the Automaton (remplirAutomate): Prompts the user to specify the values of the transition matrix for each possible transition.
 
-Displaying the Automaton (afficherAutomate): Displays the transition matrix in the form of triples (starting state, symbol, ending state) if the transition exists.
+File Structure
+main.c: Contains the main program logic.
+autom.c and autom.h: Implement functions related to automata.
+liste.c: Implements functions related to the word list.
 
-Checking a Word (verifierMot): Takes a word represented as a linked list of symbols and checks if the automaton recognizes it. Displays the result.
+Getting Started
+Compile the program using a C compiler.
+Run the executable.
 
-Memory Management (libererListe, supprimerAutomate): The libererListe and supprimerAutomate functions are used to free dynamically allocated memory.
+Follow the on-screen menu to perform various actions.
 
-Program Usage
-The program employs a straightforward user interface, allowing users to specify the automaton's characteristics, input transitions, fill the matrix, and check if a word is recognized. Checks are implemented to prevent index overflow.
+Menu Options
 
-Conclusion
-This program provides a basic implementation of a finite automaton in C, enabling users to define an automaton, input transitions, fill the matrix, and check if a word is recognized. Additionally, it incorporates memory cleanup mechanisms to prevent memory leaks.
+Create a New Automaton: Allows the user to create a new automaton.
+
+Import Automaton from File: Enables the user to import an automaton from a file.
+
+Display Automaton: Shows the details of the currently loaded automaton.
+
+Save Automaton to File: Saves the current automaton to a user-specified file.
+
+Check Completeness of Automaton: Verifies if the automaton is complete.
+
+Make Automaton Complete: Modifies the automaton to make it complete.
+
+Check Determinism of Automaton: Checks if the automaton is deterministic.
+
+Make Automaton Deterministic: Converts the automaton into a deterministic one.
+
+Verify a Word: Allows the user to enter a word and checks if it is recognized by the automaton.
+
+Quit: Exits the program after deleting the automaton.
+
+
+Notes
+Make sure to follow the on-screen instructions for each option.
+The program may request user inputs for filenames or words during execution.
+Feel free to explore the various functionalities and enjoy working with automata!
+
+
+
+
 
 
 
